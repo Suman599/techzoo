@@ -1,0 +1,415 @@
+/* General reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #3b3b3b;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.navbar .navbar-brand h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links a,
+.navbar-links button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links button:hover {
+  background-color: #6c63ff;
+}
+
+/* Auth Page (Login / Signup) styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.auth-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s ease;
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #6c63ff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #5750e2;
+}
+
+.auth-form .error {
+  color: #ff4d4d;
+  margin-bottom: 15px;
+}
+
+.auth-form .success {
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.auth-form .toggle {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.auth-form .toggle a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.auth-form .toggle a:hover {
+  color: #5750e2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .auth-form {
+    padding: 25px;
+    width: 100%;
+  }
+}
+
+/* Admin Panel Styles */
+.admin-page {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.admin-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #333;
+}
+
+/* Upload form styles */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-group input {
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #6c63ff;
+}
+
+.error {
+  color: #ff4d4d;
+  text-align: center;
+  font-size: 14px;
+}
+
+.success {
+  color: #28a745;
+  text-align: center;
+  font-size: 14px;
+}
+
+.submit-button {
+  padding: 16px;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #5750e2;
+}
+
+.submit-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 25px;
+  }
+
+  .upload-form {
+    gap: 20px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+  }
+  /* Admin Panel Styles */
+.admin-page {
+  background-color: #f4f7fc;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.admin-page h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Upload form styles */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #6c63ff;
+}
+
+.submit-button {
+  padding: 15px;
+  background-color: #6c63ff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #5750e2;
+}
+
+.submit-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+.flipbook-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.magazine-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.magazine-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.magazine-card-header h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.magazine-card-header p {
+  color: #777;
+}
+
+.magazine-card-footer {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.view-button {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+  background-color: #5750e2;
+}
+/* Container for the flipbook */
+.flipbook-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Style for the header */
+.flipbook-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Container for the PDF */
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px; /* Adjust to fit the container */
+}
+
+/* Style for individual pages in the PDF */
+.pdf-page {
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add some responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .pdf-container {
+    flex-direction: column;
+  }
+
+  .pdf-page {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+}
