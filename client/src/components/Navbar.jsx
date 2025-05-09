@@ -50,8 +50,8 @@ const Navbar = ({ user, isAdmin }) => {
     },
     button: {
       padding: "8px 16px",
-      backgroundColor: "white",
-      color: "#4B0082",
+      backgroundColor: "red",
+      color: "white",
       border: "none",
       borderRadius: "5px",
       fontWeight: "bold",

@@ -18,7 +18,7 @@ html,body {
 
 /* Navbar styles */
 .navbar {
-  background-color: #3b3b3b;
+  background-color: #7c2673;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -403,16 +403,20 @@ html,body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add some responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .pdf-container {
-    flex-direction: column;
-  }
-
-  .pdf-page {
-    width: 100%;
-    margin: 5px 0;
-  }
+@keyframes float1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
 }
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(40px); }
+}
+
 
 }
