@@ -17,6 +17,10 @@ const Home = () => {
         id: doc.id,
         ...doc.data(),
       }));
+
+      // Sort by issueNumber in descending order to show newest first
+      magazineList.sort((a, b) => b.issueNumber - a.issueNumber);
+
       setMagazines(magazineList);
     };
 
@@ -105,7 +109,7 @@ const Home = () => {
             >
               <h3 style={{ color: "#222" }}>
                 📘 Issue {magazine.issueNumber}
-                {index === magazines.length - 1 && (
+                {index === 0 && (
                   <span
                     style={{
                       fontSize: "12px",
